@@ -1,17 +1,19 @@
 # RobotJS - OSRS Shrimp Bot 🦐
 
-This repository uses [Robot.js](https://robotjs.io/) to automate mouse and keyboard inputs (Node.js is used as a run-time).
+This repository uses [Robot.js](https://robotjs.io/) to automate mouse and keyboard inputs ([Node.js](https://nodejs.org/en) is used as a run-time).
 
 - `npm install` to install the required packages
 - `npm start` will run the script in `index.js`
 
-**Note:** you may have to update system preferences to allow the script to run.
+**Note: you may have to update system preferences to allow the script to run.**
 
 ## Prereqs:
 
 - start by standing next to fishing instructor south of lumby
-- face the camera north by clicking the compass.
-- Make sure zoom is set to exactly halfway and display is set to `Resizable - Classic layout`
+- face the camera north by clicking the compass icon.
+- Make sure camera zoom is set to exactly halfway (this can be set and locked, in settings)
+- Set display to `Resizable - Classic layout`
+- In your settings, allow click+shift to drop items
 - This has been tested on the standard OSRS client (Not RuneLite.)
 
 ### Aim of this bot, step by step flow
