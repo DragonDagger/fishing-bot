@@ -5,6 +5,7 @@ const emptyInventory = require("./emptyInventory");
 
 const automation = () => {
   console.log("Script begins");
+
   sleep(1000);
   console.log("3");
   sleep(1000);
@@ -36,9 +37,33 @@ const automation = () => {
   }
 };
 
+const checkFishingSpot = () => {
+  sleep(4000);
+  robot.moveMouseSmooth(975, 678);
+  robot.mouseClick();
+  robot.mouseClick();
+  var img = robot.screen.capture();
+  var hex = img.colorAt(974, 680.1);
+
+  if (hex !== "ff0000") {
+    console.log("no fishing spot here");
+    robot.moveMouseSmooth(850, 685);
+    robot.mouseClick();
+    robot.mouseClick();
+    var img = robot.screen.capture();
+    var hex = img.colorAt(849, 687.1);
+    console.log(hex);
+  } else {
+    console.log("it worked!");
+    sleep(60000);
+    console.log("finished sleeping...");
+  }
+};
+
 // Sleep function using Atomics.wait()
 const sleep = (ms) => {
   Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, ms);
 };
 
-automation();
+// automation();
+checkFishingSpot();
