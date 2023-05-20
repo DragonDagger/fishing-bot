@@ -1,4 +1,4 @@
-# RobotJS - OSRS Shrimp Bot
+# RobotJS - OSRS Shrimp Bot 🦐
 
 This repository uses [Robot.js](https://robotjs.io/) to automate mouse and keyboard inputs (Node.js is used as a run-time).
 
