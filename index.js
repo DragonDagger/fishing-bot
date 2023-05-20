@@ -1,6 +1,6 @@
 var robot = require("robotjs");
+// next goal: depending on pixel color at certain co-ordinates, click or move on to the next position. 4 if statements??
 
-// main function where automation occurs
 const automation = () => {
   console.log("Script begins");
   sleep(1000);
@@ -14,95 +14,131 @@ const automation = () => {
   while (true) {
     robot.keyToggle("shift", "up");
     robot.setMouseDelay(1);
-    // change this mouse movement depending on initial click.
+
+    // You will need to change this mouse movement depending on initial click.
     robot.moveMouseSmooth(1080, 590);
     robot.mouseClick();
-    sleep(10000);
+    sleep(60000);
+
     // after sleep, empty inventory
     robot.keyToggle("shift", "down");
-    robot.setMouseDelay(300);
-    robot.moveMouseSmooth(1864, 984);
-    robot.mouseClick();
-    robot.setMouseDelay(300);
-    robot.moveMouseSmooth(1814, 981);
-    robot.mouseClick();
-    robot.setMouseDelay(330);
-    robot.moveMouseSmooth(1776, 986);
-    robot.mouseClick();
-    robot.setMouseDelay(200);
-    robot.moveMouseSmooth(1735, 986);
-    robot.mouseClick();
-    robot.setMouseDelay(305);
-    robot.moveMouseSmooth(1865, 948);
-    robot.mouseClick();
-    robot.setMouseDelay(300);
-    robot.moveMouseSmooth(1813, 947);
-    robot.mouseClick();
-    robot.setMouseDelay(340);
-    robot.moveMouseSmooth(1775, 947);
-    robot.mouseClick();
-    robot.setMouseDelay(340);
-    robot.moveMouseSmooth(1734, 946);
-    robot.mouseClick();
-    robot.setMouseDelay(303);
-    robot.moveMouseSmooth(1864, 909);
-    robot.mouseClick();
-    robot.setMouseDelay(300);
-    robot.moveMouseSmooth(1813, 908);
-    robot.mouseClick();
-    robot.setMouseDelay(320);
-    robot.moveMouseSmooth(1774, 908);
-    robot.mouseClick();
-    robot.setMouseDelay(340);
-    robot.moveMouseSmooth(1736, 907);
-    robot.mouseClick();
-    robot.setMouseDelay(300);
-    robot.moveMouseSmooth(1864, 874);
-    robot.mouseClick();
-    robot.setMouseDelay(300);
-    robot.moveMouseSmooth(1815, 874);
-    robot.mouseClick();
-    robot.setMouseDelay(330);
-    robot.moveMouseSmooth(1775, 873);
-    robot.mouseClick();
-    robot.setMouseDelay(300);
-    robot.moveMouseSmooth(1735, 872);
-    robot.mouseClick();
-    robot.setMouseDelay(407);
-    robot.moveMouseSmooth(1867, 839);
-    robot.mouseClick();
-    robot.setMouseDelay(408);
-    robot.moveMouseSmooth(1819, 839);
-    robot.mouseClick();
-    robot.setMouseDelay(507);
-    robot.moveMouseSmooth(1773, 837);
-    robot.mouseClick();
-    robot.setMouseDelay(300);
-    robot.moveMouseSmooth(1736, 804);
-    robot.mouseClick();
-    robot.setMouseDelay(403);
-    robot.moveMouseSmooth(1867, 803);
-    robot.mouseClick();
-    robot.setMouseDelay(308);
-    robot.moveMouseSmooth(1819, 804);
-    robot.mouseClick();
-    robot.setMouseDelay(400);
-    robot.moveMouseSmooth(1773, 805);
-    robot.mouseClick();
-    robot.setMouseDelay(301);
-    robot.moveMouseSmooth(1736, 805);
-    robot.mouseClick();
-    robot.setMouseDelay(303);
-    robot.moveMouseSmooth(1866, 764);
-    robot.mouseClick();
-    robot.setMouseDelay(307);
-    robot.moveMouseSmooth(1820, 766);
-    robot.mouseClick();
-    robot.setMouseDelay(649);
-    robot.moveMouseSmooth(1773, 766);
-    robot.mouseClick();
+    dropShrimp1();
+    dropShrimp2();
+    dropShrimp3();
+    dropShrimp4();
+    dropShrimp5();
+    dropShrimp6();
+    dropShrimp7();
     console.log("Loop Iterated.");
   }
+};
+
+// Empty inventory functions
+const dropShrimp1 = () => {
+  robot.setMouseDelay(numberBetween(300, 750));
+  robot.moveMouseSmooth(numberBetween(1861, 1869), numberBetween(981, 987));
+  robot.mouseClick();
+  robot.setMouseDelay(numberBetween(300, 750));
+  robot.moveMouseSmooth(numberBetween(1810, 1819), numberBetween(981, 987));
+  robot.mouseClick();
+  robot.setMouseDelay(numberBetween(300, 750));
+  robot.moveMouseSmooth(numberBetween(1770, 1780), numberBetween(981, 987));
+  robot.mouseClick();
+  robot.setMouseDelay(numberBetween(300, 750));
+  robot.moveMouseSmooth(numberBetween(1730, 1740), numberBetween(981, 987));
+  robot.mouseClick();
+  robot.setMouseDelay(numberBetween(300, 750));
+};
+const dropShrimp2 = () => {
+  robot.moveMouseSmooth(numberBetween(1861, 1869), numberBetween(950, 940));
+  robot.mouseClick();
+  robot.setMouseDelay(numberBetween(300, 750));
+  robot.moveMouseSmooth(numberBetween(1810, 1819), numberBetween(950, 940));
+  robot.mouseClick();
+  robot.setMouseDelay(numberBetween(300, 750));
+  robot.moveMouseSmooth(numberBetween(1770, 1780), numberBetween(950, 940));
+  robot.mouseClick();
+  robot.setMouseDelay(numberBetween(300, 750));
+  robot.moveMouseSmooth(numberBetween(1730, 1740), numberBetween(950, 940));
+  robot.mouseClick();
+  robot.setMouseDelay(numberBetween(300, 750));
+};
+
+const dropShrimp3 = () => {
+  robot.moveMouseSmooth(numberBetween(1861, 1869), numberBetween(910, 900));
+  robot.mouseClick();
+  robot.setMouseDelay(numberBetween(300, 750));
+  robot.moveMouseSmooth(numberBetween(1810, 1819), numberBetween(910, 900));
+  robot.mouseClick();
+  robot.setMouseDelay(numberBetween(300, 750));
+  robot.moveMouseSmooth(numberBetween(1770, 1780), numberBetween(910, 900));
+  robot.mouseClick();
+  robot.setMouseDelay(numberBetween(300, 750));
+  robot.moveMouseSmooth(numberBetween(1730, 1740), numberBetween(910, 900));
+  robot.mouseClick();
+  robot.setMouseDelay(numberBetween(300, 750));
+};
+
+const dropShrimp4 = () => {
+  robot.moveMouseSmooth(numberBetween(1861, 1869), numberBetween(880, 870));
+  robot.mouseClick();
+  robot.setMouseDelay(numberBetween(300, 750));
+  robot.moveMouseSmooth(numberBetween(1810, 1819), numberBetween(880, 870));
+  robot.mouseClick();
+  robot.setMouseDelay(numberBetween(300, 750));
+  robot.moveMouseSmooth(numberBetween(1770, 1780), numberBetween(880, 870));
+  robot.mouseClick();
+  robot.setMouseDelay(numberBetween(300, 750));
+  robot.moveMouseSmooth(numberBetween(1730, 1740), numberBetween(880, 870));
+  robot.mouseClick();
+  robot.setMouseDelay(numberBetween(300, 750));
+};
+
+const dropShrimp5 = () => {
+  robot.moveMouseSmooth(numberBetween(1861, 1869), numberBetween(840, 830));
+  robot.mouseClick();
+  robot.setMouseDelay(numberBetween(300, 750));
+  robot.moveMouseSmooth(numberBetween(1810, 1819), numberBetween(840, 830));
+  robot.mouseClick();
+  robot.setMouseDelay(numberBetween(300, 750));
+  robot.moveMouseSmooth(numberBetween(1770, 1780), numberBetween(840, 830));
+  robot.mouseClick();
+  robot.setMouseDelay(numberBetween(300, 750));
+  robot.moveMouseSmooth(numberBetween(1730, 1740), numberBetween(840, 830));
+  robot.mouseClick();
+  robot.setMouseDelay(numberBetween(300, 750));
+};
+
+const dropShrimp6 = () => {
+  robot.moveMouseSmooth(numberBetween(1861, 1869), numberBetween(800, 809));
+  robot.mouseClick();
+  robot.setMouseDelay(numberBetween(300, 750));
+  robot.moveMouseSmooth(numberBetween(1810, 1819), numberBetween(800, 809));
+  robot.mouseClick();
+  robot.setMouseDelay(numberBetween(300, 750));
+  robot.moveMouseSmooth(numberBetween(1770, 1780), numberBetween(800, 809));
+  robot.mouseClick();
+  robot.setMouseDelay(numberBetween(300, 750));
+  robot.moveMouseSmooth(numberBetween(1730, 1740), numberBetween(800, 809));
+  robot.mouseClick();
+  robot.setMouseDelay(numberBetween(300, 750));
+};
+
+const dropShrimp7 = () => {
+  robot.moveMouseSmooth(numberBetween(1861, 1869), numberBetween(760, 770));
+  robot.mouseClick();
+  robot.setMouseDelay(numberBetween(300, 750));
+  robot.moveMouseSmooth(numberBetween(1810, 1819), numberBetween(760, 770));
+  robot.mouseClick();
+  robot.setMouseDelay(numberBetween(300, 750));
+  robot.moveMouseSmooth(numberBetween(1770, 1780), numberBetween(760, 770));
+  robot.mouseClick();
+};
+
+// randomly select between two numbers, to slightly change clicking coordinates between mouse movements inside the inventory. Also used to change mouse delay between inputs.
+const numberBetween = (min, max) => {
+  const x = Math.floor(Math.random() * (max - min + 1)) + min;
+  return x;
 };
 
 // Sleep function using Atomics.wait()
