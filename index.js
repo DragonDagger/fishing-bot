@@ -1,17 +1,23 @@
-// EXAMPLE MOUSE AUTOMATION
-
-// Move the mouse across the screen as a sine wave.
 var robot = require("robotjs");
 
-// Speed up the mouse.
-robot.setMouseDelay(2);
+// main function where automation occurs
+const automation = () => {
+  console.log("Script begins");
+  sleep(1000);
+  console.log("3");
+  sleep(1000);
+  console.log("2");
+  sleep(1000);
+  console.log("1");
+  robot.setMouseDelay(1);
+  robot.moveMouse(0, 0);
+  sleep(1000);
+  console.log("Done.");
+};
 
-var twoPI = Math.PI * 2.0;
-var screenSize = robot.getScreenSize();
-var height = screenSize.height / 2 - 10;
-var width = screenSize.width;
+// Sleep function using Atomics.wait()
+const sleep = (ms) => {
+  Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, ms);
+};
 
-for (var x = 0; x < width; x++) {
-  y = height * Math.sin((twoPI * x) / width) + height;
-  robot.moveMouse(x, y);
-}
+automation();
