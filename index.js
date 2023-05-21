@@ -46,4 +46,44 @@ const sleep = (ms) => {
   Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, ms);
 };
 
-automation();
+// automation();
+function testScreenCapture() {
+  const activeParticleColor = ["ff0000"];
+  sleep(4000);
+  robot.moveMouseSmooth(975, 678);
+  robot.mouseClick();
+  robot.mouseClick();
+  // taking a screenshot
+  var img = robot.screen.capture(0, 0, 1920, 1080);
+  var firstcolor = img.colorAt(973, 679.1);
+  var secondcolor = img.colorAt(973, 680);
+  var thirdcolor = img.colorAt(975, 679.1);
+  var fourthcolor = img.colorAt(974, 678);
+  var fifthcolor = img.colorAt(977, 679.1);
+  console.log(
+    `the first color is: ${firstcolor},
+  the second color is: ${secondcolor},
+  the third color is: ${thirdcolor},
+  the fourth color is: ${fourthcolor},
+  the fifth color is: ${fifthcolor},`
+  );
+
+  if (activeParticleColor.includes(firstcolor)) {
+    console.log("Active fishing spot found on first check");
+  }
+  if (activeParticleColor.includes(secondcolor)) {
+    console.log("Active fishing spot found on second check");
+  }
+  if (activeParticleColor.includes(thirdcolor)) {
+    console.log("Active fishing spot found on third check");
+  }
+  if (activeParticleColor.includes(fourthcolor)) {
+    console.log("Active fishing spot found on fourth check");
+  }
+  if (activeParticleColor.includes(fifthcolor)) {
+    console.log("Active fishing spot found on fifth check");
+  } else {
+    console.log("no red here sir");
+  }
+}
+testScreenCapture();

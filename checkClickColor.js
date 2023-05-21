@@ -92,12 +92,22 @@ const oldCheckFishingSpotColor = () => {
 };
 
 function testScreenCapture() {
+  // const activeParticleColors = [
+  //   "6695dc",
+  //   "82afe3",
+  //   "5d6c87",
+  //   "f3e9f1",
+  //   "99bde7",
+  //   "aacaec",
+  //   "bdcaec",
+  //   "739bd3",
+  // ];
   sleep(4000);
   robot.moveMouseSmooth(975, 678);
   robot.mouseClick();
   robot.mouseClick();
   // taking a screenshot
   var img = robot.screen.capture(0, 0, 1920, 1080);
-  var color = img.colorAt(974, 679.1);
+  var color = img.colorAt(972, 679.1);
   console.log(`the color is: ${color}`);
 }
