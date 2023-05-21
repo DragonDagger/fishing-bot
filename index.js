@@ -1,5 +1,6 @@
 var robot = require("robotjs");
 const emptyInventory = require("./emptyInventory");
+const { rotateFishingSpot } = require("./rotateFishingSpot");
 
 // next goal: more efficient camping between spots. Refine likelihood of being at a active fishing spot.
 
@@ -16,6 +17,7 @@ const automation = () => {
   let counter = 0;
   // infinite loop
   while (true) {
+    // stop holding down shift key
     robot.keyToggle("shift", "up");
     robot.setMouseDelay(2);
 
@@ -23,7 +25,7 @@ const automation = () => {
     rotateFishingSpot();
     rotateFishingSpot();
 
-    // after sleep, empty inventory
+    // start holding down shift key, empty the inventory
     robot.keyToggle("shift", "down");
     emptyInventory.dropShrimp1();
     emptyInventory.dropShrimp2();
@@ -42,48 +44,6 @@ const automation = () => {
 // Sleep function using Atomics.wait()
 const sleep = (ms) => {
   Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, ms);
-};
-
-// This function rotates between two fishing spots
-const rotateFishingSpot = () => {
-  //
-  sleep(3000);
-  robot.moveMouseSmooth(975, 678, 0.8);
-  robot.mouseClick();
-  robot.mouseClick();
-  sleep(10000);
-  robot.mouseClick();
-  sleep(10000);
-  robot.mouseClick();
-  sleep(10000);
-  robot.mouseClick();
-  sleep(10000);
-  robot.mouseClick();
-  sleep(10000);
-  //
-  console.log("rotate to next spot...");
-  //
-  robot.moveMouseSmooth(850, 685);
-  robot.mouseClick();
-  robot.mouseClick();
-  sleep(1000);
-  robot.moveMouseSmooth(950, 650);
-  sleep(10000);
-  robot.mouseClick();
-  robot.mouseClick();
-  sleep(10000);
-  robot.mouseClick();
-  sleep(10000);
-  robot.mouseClick();
-  sleep(10000);
-  robot.mouseClick();
-  sleep(10000);
-  robot.moveMouseSmooth(1060, 650, 0.8);
-  sleep(1000);
-  robot.mouseClick();
-  robot.mouseClick();
-  sleep(1000);
-  //
 };
 
 automation();
