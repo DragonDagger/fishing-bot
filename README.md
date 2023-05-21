@@ -5,27 +5,31 @@ This repository uses [Robot.js](https://robotjs.io/) to automate mouse and keybo
 - `npm install` to install the required packages
 - `npm start` will run the script in `index.js`
 
-**Note: you may have to update system preferences to allow the script to run.**
+**Note:**
+
+- This has been tested on the standard OSRS client ( Not RuneLite. ) on a 1920 x 1080 Display.
+- If using Mac, you may have to update system preferences to allow the script to run.
 
 ## Prereqs:
 
-- start by standing next to fishing instructor south of lumby
+- start by standing at the fishing spot, south of lumbridge.
 - face the camera north by clicking the compass icon.
 - Make sure camera zoom is set to exactly halfway (this can be set and locked, in settings)
 - Set display to `Resizable - Classic layout`
 - In your settings, allow click+shift to drop items
-- This has been tested on the standard OSRS client (Not RuneLite.)
 
-### Aim of this bot, step by step flow
+### Future Goals for the bot
 
-1. The mouse will move/alternate between the different fishing zones.
-2. Once it detects color change in top left corner gold (highlighting that we are currently hovering over a active fishing spot) it will click and wait for a specified time.
-3. When inventory is full then empty it one by one.
-4. An alternate script that walks shrimp to the bank and returns to fishing spot.
+1. Detect color change when hovering over or clicking an active fishing spot, then wait for a specified time.
+2. An alternate script that walks shrimp to the bank and returns to fishing spot.
+3. Alternate between more than 2 fishing spots at once.
+4. more random variations between inputs/movements so its harder to pickup that it's a bot.
 
 ### Current flow of the bot
 
-1. The mouse will click a single fishing spot.
+1. The mouse will click the first fishing spot.
 2. Script waits/sleeps for a specified time.
-3. When time is up, assumes inventory is full and then empty it one by one.
-4. Loop repeats infinitely.
+3. Click and fish at the second spot for a specified time.
+4. Move back to original spot, function repeats x3 before moving on.
+5. When time is up and function has been called 3 times, assumes inventory is full and then empty it one by one.
+6. Loop repeats infinitely.
