@@ -34,3 +34,5 @@ This repository uses [Robot.js](https://robotjs.io/) to automate mouse and keybo
 4. Move back to original spot, function repeats x3 before moving on.
 5. When time is up and function has been called 3 times, assumes inventory is full and then empty it one by one.
 6. Loop repeats infinitely.
+
+**Inspired by:** Learncodebygaming's  [woodcutting bot](https://github.com/learncodebygaming/woodcutter). 
