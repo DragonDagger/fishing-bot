@@ -14,7 +14,11 @@ const sleep = (ms) => {
 
 const dropShrimp1 = () => {
   sleep(numberBetween(140, 310));
-  robot.moveMouseSmooth(numberBetween(1861, 1869), numberBetween(981, 987));
+  robot.moveMouseSmooth(
+    numberBetween(1861, 1869),
+    numberBetween(981, 987),
+    0.5
+  );
   robot.mouseClick();
   sleep(numberBetween(140, 310));
   robot.moveMouseSmooth(numberBetween(1810, 1819), numberBetween(981, 987));
