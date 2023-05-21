@@ -13,10 +13,16 @@ This repository uses [Robot.js](https://robotjs.io/) to automate mouse and keybo
 ## Prereqs:
 
 - start by standing at the fishing spot, south of lumbridge.
-- face the camera north by clicking the compass icon.
-- Make sure camera zoom is set to exactly halfway (this can be set and locked, in settings)
-- Set display to `Resizable - Classic layout`
-- In your settings, allow click+shift to drop items
+
+  ![Fishing spot gif](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNmY3ZWZmMWQ2ZmY3MDJiMTgzNDcyMzBhZjFiZDU4ODAyZGY4NjBhMSZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/OHBo83r2AbmHFBYVTH/giphy.gif)
+
+  - face the camera north by clicking the compass icon.  
+    ![Compass icon](./images/compass-icon.png)
+  - Make sure camera zoom is set to exactly halfway (this can be set and locked, in settings)
+  - Set display to `Resizable - Classic layout`  
+    ![camera & display settings](./images/zoom-display-settings.png)
+  - In your settings, allow click+shift to drop items  
+    ![shift click drop](./images/shift-click-drop.png)
 
 ### Future Goals for the bot
 
