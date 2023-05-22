@@ -66,7 +66,7 @@ const checkFishingSpot = () => {
       robot.moveMouseSmooth(1050, 580);
       robot.mouseClick();
       sleep(2000);
-      checkFishingSpot();
+      // checkFishingSpot();
     }
 
     if (secondSpot === false) {
@@ -93,14 +93,14 @@ const checkFishingSpot = () => {
         robot.moveMouseSmooth(850, 755);
         robot.mouseClick();
         sleep(2000);
-        checkFishingSpot();
+        // checkFishingSpot();
       }
 
       if (thirdSpot === false) {
         robot.moveMouseSmooth(850, 755);
         robot.mouseClick();
         sleep(2000);
-        checkFishingSpot();
+        // checkFishingSpot();
       }
     }
   } else {
