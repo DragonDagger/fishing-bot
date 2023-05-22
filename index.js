@@ -30,6 +30,8 @@ const automation = () => {
     checkFishingSpot();
     checkFishingSpot();
     checkFishingSpot();
+    // may remove this 4th call, depending on if its too much or not
+    checkFishingSpot();
 
     // start holding down shift key, empty the inventory
     robot.keyToggle("shift", "down");
