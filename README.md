@@ -22,11 +22,12 @@ This repository uses [Robot.js](https://robotjs.io/) to automate mouse and keybo
 
 1. The mouse will hover over and click the **first** fishing spot.
 2. Detect if the color around the click pixels is red `#ff0000`. ( _red means there is an active fishing spot here._ )
-3. If color was not detected, move to the **second** spot and repeat the process.
-4. If color was still not detected, move to the **third** spot and repeat the process.
-5. Catch all, Move's back to first spot, ready for the next loop iteration.
-6. When time is up and function has been called 3-4 times, assumes inventory is full and then empty it one by one.
-7. Loop currently repeats infinitely.
+3. If color is red, camp at spot for 50 seconds.
+4. If color was not red, move to the **second** spot and repeat the process.
+5. If color was still not detected, move to the **third** spot and repeat the process.
+6. Catch all, Move's back to first spot, ready for the next loop iteration.
+7. When time is up and function has been called 3-4 times, assumes inventory is full and then empty it one by one.
+8. Loop currently repeats infinitely.
 
 ### Future Goals for the bot
 
