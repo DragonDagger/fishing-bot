@@ -5,7 +5,7 @@ This repository uses [Robot.js](https://robotjs.io/) to automate mouse and keybo
 - `npm install` to install the required packages
 - `npm start` will run the script in `index.js`
 
-**Note:**
+**Important:**
 
 - This has been tested on the standard OSRS client ( Not RuneLite. ) on a 1920 x 1080 Display.
 - If using Mac, you may have to update system preferences to allow the script to run.
@@ -17,7 +17,6 @@ This repository uses [Robot.js](https://robotjs.io/) to automate mouse and keybo
 - Make sure camera zoom is set to exactly halfway (this can be set and locked, in settings)
 - Set display to `Resizable - Classic layout`
 - In your settings, allow click+shift to drop items
-- Check the `images` folder for more detail about these steps.
 
 ### Current flow of the bot
 
