@@ -19,20 +19,20 @@ This repository uses [Robot.js](https://robotjs.io/) to automate mouse and keybo
 - In your settings, allow click+shift to drop items
 - Check the `images` folder for more detail about these steps.
 
-### Future Goals for the bot
-
-1. Detect color change when hovering over or clicking an active fishing spot, then wait for a specified time.
-2. An alternate script that walks shrimp to the bank and returns to fishing spot.
-3. Alternate between more than 2 fishing spots at once.
-4. more random variations between inputs/movements so its harder to pickup that it's a bot.
-
 ### Current flow of the bot
 
-1. The mouse will click the first fishing spot.
-2. Script waits/sleeps for a specified time.
-3. Click and fish at the second spot for a specified time.
-4. Move back to original spot, function repeats x3 before moving on.
-5. When time is up and function has been called 3 times, assumes inventory is full and then empty it one by one.
-6. Loop repeats infinitely. ( averages 4000xp per hour. 😅 )
+1. The mouse will hover over and click the **first** fishing spot.
+2. Detect if the color around the click pixels is red `#ff0000`. ( _red means there is an active fishing spot here._ )
+3. If color was not detected, move to the **second** spot and repeat the process.
+4. If color was still not detected, move to the **third** spot and repeat the process.
+5. Catch all, Move's back to first spot, ready for the next loop iteration or recursive function call.
+6. When time is up and function has been called 3 times, assumes inventory is full and then empty it one by one.
+7. Loop currently repeats infinitely.
+
+### Future Goals for the bot
+
+1. Ability to empty inventory more efficiently, currently this is the highest priority.
+2. More random variations between inputs/movements so its harder to pickup that it's a bot.
+3. An alternate script that walks shrimp to the bank and returns to fishing spot.
 
 **Inspired by:** Learncodebygaming's [woodcutting bot](https://github.com/learncodebygaming/woodcutter).

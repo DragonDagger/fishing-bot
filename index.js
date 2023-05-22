@@ -2,7 +2,11 @@ var robot = require("robotjs");
 const emptyInventory = require("./emptyInventory");
 const { checkFishingSpot } = require("./checkClickColor");
 
-// next goal: more efficient camping between spots. Refine likelihood of being at a active fishing spot.
+// next goal: set a counter, or loop so that if it enters second spot or third spot maybe 3 times in a row then leave the function or trigger the empty inventory function.
+// Currently the only way out of the function is if the first fishing spot has gone through the active process 3 times.
+// With the current flow, inventory could fill up earlier - wasting extra time.
+
+// Or: simpler option could be to change function recursivness or make inventory empty occur more frequently.
 
 const automation = () => {
   console.log("Script warming up");
@@ -19,8 +23,12 @@ const automation = () => {
   while (true) {
     // stop holding down shift key
     robot.keyToggle("shift", "up");
+
+    // for some reason, changing the MouseDelay below 2 breaks the function that checks the click color.
     robot.setMouseDelay(2);
 
+    checkFishingSpot();
+    checkFishingSpot();
     checkFishingSpot();
 
     // start holding down shift key, empty the inventory

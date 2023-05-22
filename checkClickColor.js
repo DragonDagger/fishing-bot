@@ -53,6 +53,8 @@ const checkFishingSpot = () => {
 
     if (secondSpot === true) {
       sleep(10000);
+      robot.moveMouseSmooth(950, 670);
+      sleep(1000);
       robot.mouseClick();
       sleep(10000);
       robot.mouseClick();
@@ -61,7 +63,7 @@ const checkFishingSpot = () => {
       sleep(10000);
       robot.mouseClick();
       sleep(10000);
-      robot.moveMouseSmooth(1050, 505);
+      robot.moveMouseSmooth(1050, 580);
       robot.mouseClick();
       sleep(2000);
       checkFishingSpot();
@@ -72,11 +74,14 @@ const checkFishingSpot = () => {
       robot.moveMouseSmooth(1050, 590);
       robot.mouseClick();
       sleep(2000);
+
       const thirdSpot = checkClickColor(1200, 515);
       sleep(2000);
 
       if (thirdSpot === true) {
         sleep(10000);
+        robot.moveMouseSmooth(1070, 593);
+        sleep(1000);
         robot.mouseClick();
         sleep(10000);
         robot.mouseClick();
