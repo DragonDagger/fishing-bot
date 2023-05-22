@@ -47,12 +47,20 @@ function checkClickColor(x, y) {
 
 const checkFishingSpot = () => {
   const firstSpot = checkClickColor(975, 678);
-  sleep(2000);
+
   if (firstSpot === false) {
     const secondSpot = checkClickColor(850, 685);
 
     if (secondSpot === true) {
-      sleep(90000);
+      sleep(10000);
+      robot.mouseClick();
+      sleep(10000);
+      robot.mouseClick();
+      sleep(10000);
+      robot.mouseClick();
+      sleep(10000);
+      robot.mouseClick();
+      sleep(10000);
       robot.moveMouseSmooth(1050, 505);
       robot.mouseClick();
       sleep(2000);
@@ -63,12 +71,20 @@ const checkFishingSpot = () => {
       sleep(2000);
       robot.moveMouseSmooth(1050, 590);
       robot.mouseClick();
-      sleep(4000);
+      sleep(2000);
       const thirdSpot = checkClickColor(1200, 515);
       sleep(2000);
 
       if (thirdSpot === true) {
-        sleep(90000);
+        sleep(10000);
+        robot.mouseClick();
+        sleep(10000);
+        robot.mouseClick();
+        sleep(10000);
+        robot.mouseClick();
+        sleep(10000);
+        robot.mouseClick();
+        sleep(10000);
         robot.moveMouseSmooth(850, 755);
         robot.mouseClick();
         sleep(2000);
@@ -84,16 +100,17 @@ const checkFishingSpot = () => {
     }
   } else {
     console.log(`inside the else statement`);
-    sleep(90000);
-    console.log("finished sleeping...");
+    sleep(10000);
+    robot.mouseClick();
+    sleep(10000);
+    robot.mouseClick();
+    sleep(10000);
+    robot.mouseClick();
+    sleep(10000);
+    robot.mouseClick();
+    sleep(10000);
+    console.log("finished the else statement...");
   }
 };
 
-// const zoggy = testScreenCapture();
-
-// if (zoggy === true) {
-//   console.log("TRUE");
-// }
-// if (zoggy === false) {
-//   console.log("False");
-// }
+module.exports = { checkClickColor, checkFishingSpot };
