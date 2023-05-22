@@ -1,3 +1,5 @@
+// This code is now deprecated, as I have got the color function working as expected.
+
 var robot = require("robotjs");
 
 const sleep = (ms) => {

@@ -1,6 +1,6 @@
 var robot = require("robotjs");
 const emptyInventory = require("./emptyInventory");
-const { rotateFishingSpot } = require("./rotateFishingSpot");
+const { checkFishingSpot } = require("./checkClickColor");
 
 // next goal: more efficient camping between spots. Refine likelihood of being at a active fishing spot.
 
@@ -21,9 +21,7 @@ const automation = () => {
     robot.keyToggle("shift", "up");
     robot.setMouseDelay(2);
 
-    rotateFishingSpot();
-    rotateFishingSpot();
-    rotateFishingSpot();
+    checkFishingSpot();
 
     // start holding down shift key, empty the inventory
     robot.keyToggle("shift", "down");
@@ -46,4 +44,4 @@ const sleep = (ms) => {
   Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, ms);
 };
 
-// automation();
+automation();
