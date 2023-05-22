@@ -1,6 +1,6 @@
 var robot = require("robotjs");
-const emptyInventory = require("./emptyInventory");
-const { checkFishingSpot } = require("./checkClickColor");
+const emptyInventory = require("./functions/emptyInventory");
+const { checkFishingSpot } = require("./functions/checkFishingSpot");
 
 // Goal: Change function recursivness or make inventory empty occur more frequently.
 
