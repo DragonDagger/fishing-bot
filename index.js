@@ -2,11 +2,7 @@ var robot = require("robotjs");
 const emptyInventory = require("./emptyInventory");
 const { checkFishingSpot } = require("./checkClickColor");
 
-// next goal: set a counter, or loop so that if it enters second spot or third spot maybe 3 times in a row then leave the function or trigger the empty inventory function.
-// Currently the only way out of the function is if the first fishing spot has gone through the active process 3 times.
-// With the current flow, inventory could fill up earlier - wasting extra time.
-
-// Or: simpler option could be to change function recursivness or make inventory empty occur more frequently.
+// Goal: Change function recursivness or make inventory empty occur more frequently.
 
 const automation = () => {
   console.log("Script warming up");
