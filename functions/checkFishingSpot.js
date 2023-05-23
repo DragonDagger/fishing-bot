@@ -50,12 +50,14 @@ const checkFishingSpot = () => {
       let mouse = robot.getMousePos();
       sleep(1000);
       if (checkNextClickColor(mouse.x, mouse.y)) {
-        sleep(10000);
-        checkNextClickColor(mouse.x, mouse.y);
-        sleep(10000);
-        checkNextClickColor(mouse.x, mouse.y);
-        sleep(10000);
-        checkNextClickColor(mouse.x, mouse.y);
+        for (let i = 0; i < 3; i++) {
+          sleep(10000);
+          if (checkNextClickColor(mouse.x, mouse.y)) {
+            continue;
+          } else {
+            break;
+          }
+        }
         sleep(10000);
         robot.moveMouseSmooth(1050, 580);
         robot.mouseClick();
@@ -84,12 +86,14 @@ const checkFishingSpot = () => {
         sleep(1000);
         let mouse = robot.getMousePos();
         if (checkNextClickColor(mouse.x, mouse.y)) {
-          sleep(10000);
-          checkNextClickColor(mouse.x, mouse.y);
-          sleep(10000);
-          checkNextClickColor(mouse.x, mouse.y);
-          sleep(10000);
-          checkNextClickColor(mouse.x, mouse.y);
+          for (let i = 0; i < 3; i++) {
+            sleep(10000);
+            if (checkNextClickColor(mouse.x, mouse.y)) {
+              continue;
+            } else {
+              break;
+            }
+          }
           sleep(10000);
           robot.moveMouseSmooth(850, 755);
           robot.mouseClick();
@@ -114,12 +118,14 @@ const checkFishingSpot = () => {
     sleep(10000);
     let mouse = robot.getMousePos();
     if (checkNextClickColor(mouse.x, mouse.y)) {
-      sleep(10000);
-      checkNextClickColor(mouse.x, mouse.y);
-      sleep(10000);
-      checkNextClickColor(mouse.x, mouse.y);
-      sleep(10000);
-      checkNextClickColor(mouse.x, mouse.y);
+      for (let i = 0; i < 3; i++) {
+        sleep(10000);
+        if (checkNextClickColor(mouse.x, mouse.y)) {
+          continue;
+        } else {
+          break;
+        }
+      }
       sleep(10000);
       console.log("Have left the checkFishingSpot function ...");
     } else {
