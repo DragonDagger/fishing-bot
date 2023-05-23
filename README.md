@@ -10,6 +10,10 @@ This repository uses [Robot.js](https://robotjs.io/) to automate mouse and keybo
 - This has been tested on the standard OSRS client ( Not RuneLite. ) on a 1920 x 1080 Display Resolution.
 - If using Mac, you may have to update system preferences to allow the script to run.
 
+
+https://github.com/DragonDagger/robotjs-shrimp/assets/101432646/f6bbcfc1-028a-4f10-a019-cd39a245930b
+
+
 ## Prereqs:
 
 - start by standing at the fishing spot, south of lumbridge.
