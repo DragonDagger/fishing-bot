@@ -1,6 +1,7 @@
 var robot = require("robotjs");
 const emptyInventory = require("./functions/emptyInventory");
 const { checkFishingSpot } = require("./functions/checkFishingSpot");
+const { sleep } = require("./functions/sleep");
 
 const automation = () => {
   console.log("Script warming up");
@@ -41,11 +42,6 @@ const automation = () => {
 
     console.log(`Loop Iterated ${counter} times`);
   }
-};
-
-// Sleep function using Atomics.wait()
-const sleep = (ms) => {
-  Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, ms);
 };
 
 automation();
