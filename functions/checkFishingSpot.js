@@ -35,7 +35,7 @@ function checkNextClickColor(x, y) {
     return true;
   } else {
     console.log("This fishing spot is no longer active.");
-    checkFishingSpot();
+    return false;
   }
 }
 const checkFishingSpot = () => {
@@ -49,18 +49,24 @@ const checkFishingSpot = () => {
       robot.moveMouseSmooth(950, 670);
       let mouse = robot.getMousePos();
       sleep(1000);
-      checkNextClickColor(mouse.x, mouse.y);
-      sleep(10000);
-      checkNextClickColor(mouse.x, mouse.y);
-      sleep(10000);
-      checkNextClickColor(mouse.x, mouse.y);
-      sleep(10000);
-      checkNextClickColor(mouse.x, mouse.y);
-      sleep(10000);
-      robot.moveMouseSmooth(1050, 580);
-      robot.mouseClick();
-      sleep(2000);
-      console.log("Have left the checkFishingSpot function.");
+      if (checkNextClickColor(mouse.x, mouse.y)) {
+        sleep(10000);
+        checkNextClickColor(mouse.x, mouse.y);
+        sleep(10000);
+        checkNextClickColor(mouse.x, mouse.y);
+        sleep(10000);
+        checkNextClickColor(mouse.x, mouse.y);
+        sleep(10000);
+        robot.moveMouseSmooth(1050, 580);
+        robot.mouseClick();
+        sleep(2000);
+        console.log("Have left the checkFishingSpot function.");
+      } else {
+        robot.moveMouseSmooth(1050, 580);
+        robot.mouseClick();
+        sleep(2000);
+        console.log("Have left the checkFishingSpot function.");
+      }
     }
 
     if (secondSpot === false) {
@@ -77,18 +83,24 @@ const checkFishingSpot = () => {
         robot.moveMouseSmooth(1070, 593);
         sleep(1000);
         let mouse = robot.getMousePos();
-        checkNextClickColor(mouse.x, mouse.y);
-        sleep(10000);
-        checkNextClickColor(mouse.x, mouse.y);
-        sleep(10000);
-        checkNextClickColor(mouse.x, mouse.y);
-        sleep(10000);
-        checkNextClickColor(mouse.x, mouse.y);
-        sleep(10000);
-        robot.moveMouseSmooth(850, 755);
-        robot.mouseClick();
-        sleep(2000);
-        console.log("Have left the checkFishingSpot function.");
+        if (checkNextClickColor(mouse.x, mouse.y)) {
+          sleep(10000);
+          checkNextClickColor(mouse.x, mouse.y);
+          sleep(10000);
+          checkNextClickColor(mouse.x, mouse.y);
+          sleep(10000);
+          checkNextClickColor(mouse.x, mouse.y);
+          sleep(10000);
+          robot.moveMouseSmooth(850, 755);
+          robot.mouseClick();
+          sleep(2000);
+          console.log("Have left the checkFishingSpot function.");
+        } else {
+          robot.moveMouseSmooth(850, 755);
+          robot.mouseClick();
+          sleep(2000);
+          console.log("Have left the checkFishingSpot function.");
+        }
       }
 
       if (thirdSpot === false) {
@@ -101,15 +113,18 @@ const checkFishingSpot = () => {
   } else {
     sleep(10000);
     let mouse = robot.getMousePos();
-    checkNextClickColor(mouse.x, mouse.y);
-    sleep(10000);
-    checkNextClickColor(mouse.x, mouse.y);
-    sleep(10000);
-    checkNextClickColor(mouse.x, mouse.y);
-    sleep(10000);
-    checkNextClickColor(mouse.x, mouse.y);
-    sleep(10000);
-    console.log("Have left the checkFishingSpot function ...");
+    if (checkNextClickColor(mouse.x, mouse.y)) {
+      sleep(10000);
+      checkNextClickColor(mouse.x, mouse.y);
+      sleep(10000);
+      checkNextClickColor(mouse.x, mouse.y);
+      sleep(10000);
+      checkNextClickColor(mouse.x, mouse.y);
+      sleep(10000);
+      console.log("Have left the checkFishingSpot function ...");
+    } else {
+      console.log("Have left the checkFishingSpot function ...");
+    }
   }
 };
 
