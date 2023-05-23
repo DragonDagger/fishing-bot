@@ -7,7 +7,7 @@ This repository uses [Robot.js](https://robotjs.io/) to automate mouse and keybo
 
 **Important:**
 
-- This has been tested on the standard OSRS client ( Not RuneLite. ) on a 1920 x 1080 Display.
+- This has been tested on the standard OSRS client ( Not RuneLite. ) on a 1920 x 1080 Display Resolution.
 - If using Mac, you may have to update system preferences to allow the script to run.
 
 ## Prereqs:
@@ -15,7 +15,7 @@ This repository uses [Robot.js](https://robotjs.io/) to automate mouse and keybo
 - start by standing at the fishing spot, south of lumbridge.
 - face the camera north by clicking the compass icon.
 - Make sure camera zoom is set to exactly halfway (this can be set and locked, in settings)
-- Set display to `Resizable - Classic layout`
+- Set display to `Resizable - Classic layout` ( The Windows task bar takes up space in the display, so account for this. )
 - In your settings, allow click+shift to drop items
 
 ### Current flow of the bot
@@ -34,5 +34,6 @@ This repository uses [Robot.js](https://robotjs.io/) to automate mouse and keybo
 1. Ability to empty inventory more efficiently, currently this is the highest priority.
 2. More random variations between inputs/movements so its harder to pickup that it's a bot.
 3. An alternate script that walks shrimp to the bank and returns to fishing spot.
+4. An alternate script that cooks shrimp before dropping them.
 
 **Inspired by:** Learncodebygaming's [woodcutting bot](https://github.com/learncodebygaming/woodcutter).
