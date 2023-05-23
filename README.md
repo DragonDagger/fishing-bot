@@ -35,8 +35,7 @@ https://github.com/DragonDagger/robotjs-shrimp/assets/101432646/f6bbcfc1-028a-4f
 5. If color was still not detected, move to the **third** spot and repeat the process.
 6. Catch all, Move's back to first spot, ready for the next loop iteration.
 7. When time is up and function has been called 3-4 times, assumes inventory is full and then empty it one by one.
-8. Loop currently repeats infinitely.
-9. 7000xp per hour, on average.
+8. Loop currently repeats infinitely. ( 7000xp per hour, on average. )
 
 ### Future Goals for the bot
 
