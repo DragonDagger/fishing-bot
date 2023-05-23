@@ -2,8 +2,6 @@ var robot = require("robotjs");
 const emptyInventory = require("./functions/emptyInventory");
 const { checkFishingSpot } = require("./functions/checkFishingSpot");
 
-// Goal: Change function recursivness or make inventory empty occur more frequently.
-
 const automation = () => {
   console.log("Script warming up");
 
@@ -26,8 +24,8 @@ const automation = () => {
     checkFishingSpot();
     checkFishingSpot();
     checkFishingSpot();
-    // may remove this 4th call, depending on if its too much or not
-    checkFishingSpot();
+    // may remove this 4th call, depending on if its too much or not, also depends on fishing level
+    // checkFishingSpot();
 
     // start holding down shift key, empty the inventory
     robot.keyToggle("shift", "down");
