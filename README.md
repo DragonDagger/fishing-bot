@@ -7,12 +7,8 @@ This repository uses [Robot.js](https://robotjs.io/) to automate mouse and keybo
 
 **Important:**
 
-- This has been tested on the standard OSRS client ( Not RuneLite. ) on a 1920 x 1080 Display Resolution.
+- This has been tested on the standard OSRS client ( **Not RuneLite.** ) on a 1920 x 1080 Resolution Display.
 - If using Mac, you may have to update system preferences to allow the script to run.
-
-
-https://github.com/DragonDagger/robotjs-shrimp/assets/101432646/f6bbcfc1-028a-4f10-a019-cd39a245930b
-
 
 ## Prereqs:
 
@@ -21,6 +17,14 @@ https://github.com/DragonDagger/robotjs-shrimp/assets/101432646/f6bbcfc1-028a-4f
 - Make sure camera zoom is set to exactly halfway (this can be set and locked, in settings)
 - Set display to `Resizable - Classic layout` ( The Windows task bar takes up space in the display, so account for this. )
 - In your settings, allow click+shift to drop items
+
+<details>
+
+  <summary>Bot Flow Video</summary>
+
+https://github.com/DragonDagger/robotjs-shrimp/assets/101432646/f6bbcfc1-028a-4f10-a019-cd39a245930b
+
+</details>
 
 ### Current flow of the bot
 
@@ -40,4 +44,7 @@ https://github.com/DragonDagger/robotjs-shrimp/assets/101432646/f6bbcfc1-028a-4f
 3. An alternate script that walks shrimp to the bank and returns to fishing spot.
 4. An alternate script that cooks shrimp before dropping them.
 
-**Inspired by:** Learncodebygaming's [woodcutting bot](https://github.com/learncodebygaming/woodcutter).
+___
+
+- **Disclaimer:** No Runescape economies were harmed in the making of this bot. 
+- **Inspired by:** Learncodebygaming's [woodcutting bot](https://github.com/learncodebygaming/woodcutter).
