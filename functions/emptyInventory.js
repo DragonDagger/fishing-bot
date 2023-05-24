@@ -1,13 +1,10 @@
-var robot = require("robotjs");
+const robot = require("robotjs");
+const { sleep } = require("./sleep");
 
 // randomly select between two numbers, to slightly change clicking coordinates between mouse movements inside the inventory. Also used to change mouse delay between inputs.
 const numberBetween = (min, max) => {
   const x = Math.floor(Math.random() * (max - min + 1)) + min;
   return x;
-};
-
-const sleep = (ms) => {
-  Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, ms);
 };
 
 // Empty inventory functions

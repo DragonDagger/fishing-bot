@@ -1,6 +1,7 @@
 var robot = require("robotjs");
 const emptyInventory = require("./functions/emptyInventory");
 const { checkFishingSpot } = require("./functions/checkFishingSpot");
+const { sleep } = require("./functions/sleep");
 
 const automation = () => {
   console.log("Script warming up");
@@ -21,10 +22,10 @@ const automation = () => {
     // for some reason, changing the MouseDelay below 2 breaks the function that checks the click color.
     robot.setMouseDelay(2);
 
+    // the amount of function calls needed here will change depending on fishing level (this is because: chance of successul catch increases the higher your level is.)
     checkFishingSpot();
     checkFishingSpot();
     checkFishingSpot();
-    // may remove this 4th call, depending on if its too much or not, also depends on fishing level
     // checkFishingSpot();
 
     // start holding down shift key, empty the inventory
@@ -41,11 +42,6 @@ const automation = () => {
 
     console.log(`Loop Iterated ${counter} times`);
   }
-};
-
-// Sleep function using Atomics.wait()
-const sleep = (ms) => {
-  Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, ms);
 };
 
 automation();
