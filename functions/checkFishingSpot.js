@@ -51,7 +51,7 @@ const checkFishingSpot = () => {
       sleep(1000);
       if (checkNextClickColor(mouse.x, mouse.y)) {
         for (let i = 0; i < 4; i++) {
-          console.log(`checked color loop: ${i} times!`);
+          console.log(`checked color: ${i} times!`);
           sleep(10000);
           if (checkNextClickColor(mouse.x, mouse.y)) {
             continue;
@@ -88,7 +88,7 @@ const checkFishingSpot = () => {
         let mouse = robot.getMousePos();
         if (checkNextClickColor(mouse.x, mouse.y)) {
           for (let i = 0; i < 4; i++) {
-            console.log(`checked color loop: ${i} times!`);
+            console.log(`checked color: ${i} times!`);
             sleep(10000);
             if (checkNextClickColor(mouse.x, mouse.y)) {
               continue;
@@ -121,7 +121,7 @@ const checkFishingSpot = () => {
     let mouse = robot.getMousePos();
     if (checkNextClickColor(mouse.x, mouse.y)) {
       for (let i = 0; i < 4; i++) {
-        console.log(`checked color loop: ${i} times!`);
+        console.log(`checked color: ${i} times!`);
         sleep(10000);
         if (checkNextClickColor(mouse.x, mouse.y)) {
           continue;
@@ -130,7 +130,7 @@ const checkFishingSpot = () => {
         }
       }
       sleep(2000);
-      console.log("Reseting spot 1.");
+      console.log("Resetting at spot 1.");
     }
   }
 };
