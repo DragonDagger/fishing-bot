@@ -1,5 +1,5 @@
 var robot = require("robotjs");
-const emptyInventory = require("./functions/emptyInventory");
+const { emptyInventory } = require("./functions/emptyInventory");
 const { checkFishingSpot } = require("./functions/checkFishingSpot");
 const { sleep } = require("./functions/sleep");
 
@@ -7,19 +7,17 @@ const automation = () => {
   console.log("Script warming up");
 
   sleep(1000);
-  console.log("ready...");
+  console.log("3");
   sleep(1000);
-  console.log("set...");
+  console.log("2");
   sleep(1000);
-  console.log("go...");
+  console.log("1");
 
   let counter = 0;
   // infinite loop
   while (true) {
     // stop holding down shift key
     robot.keyToggle("shift", "up");
-
-    // for some reason, changing the MouseDelay below 2 breaks the function that checks the click color.
     robot.setMouseDelay(2);
 
     // the amount of function calls needed here will change depending on fishing level (this is because: chance of successul catch increases the higher your level is.)
@@ -30,13 +28,7 @@ const automation = () => {
 
     // start holding down shift key, empty the inventory
     robot.keyToggle("shift", "down");
-    emptyInventory.dropShrimp1();
-    emptyInventory.dropShrimp2();
-    emptyInventory.dropShrimp3();
-    emptyInventory.dropShrimp4();
-    emptyInventory.dropShrimp5();
-    emptyInventory.dropShrimp6();
-    emptyInventory.dropShrimp7();
+    emptyInventory();
 
     counter++;
 

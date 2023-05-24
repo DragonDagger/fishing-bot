@@ -7,7 +7,7 @@ This repository uses [Robot.js](https://robotjs.io/) to automate mouse and keybo
 
 **Important:**
 
-- This has been tested on the standard OSRS client ( **Not RuneLite.** ) on a 1920 x 1080 Resolution Display.
+- This bot has been tested on the standard OSRS client ( **Not RuneLite.** ) on a 1920 x 1080 Resolution Display, Windows 10.
 - If using Mac, you may have to update system preferences to allow the script to run.
 
 ## Prereqs:

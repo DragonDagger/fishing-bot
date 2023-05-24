@@ -114,13 +114,16 @@ const dropShrimp7 = () => {
   robot.mouseClick();
 };
 
+const emptyInventory = () => {
+  dropShrimp1();
+  dropShrimp2();
+  dropShrimp3();
+  dropShrimp4();
+  dropShrimp5();
+  dropShrimp6();
+  dropShrimp7();
+};
+
 module.exports = {
-  dropShrimp1,
-  dropShrimp2,
-  dropShrimp3,
-  dropShrimp4,
-  dropShrimp5,
-  dropShrimp6,
-  dropShrimp7,
-  numberBetween,
+  emptyInventory,
 };
