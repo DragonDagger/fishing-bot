@@ -36,7 +36,7 @@ https://github.com/DragonDagger/robotjs-shrimp/assets/101432646/f6bbcfc1-028a-4f
 6. Catch all, Move's back to first spot, ready for the next loop iteration.
 7. When time is up and function has been called 3-4 times, assumes inventory is full and then empty it one by one.
 8. Loop currently repeats infinitely.
-9. XP per hour: TBD.
+9. XP per hour: 4000 - 9000XP per hour, Depending on fishing level.
 
 ### Future Goals for the bot
 
