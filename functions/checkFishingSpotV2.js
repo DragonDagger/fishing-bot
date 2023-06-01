@@ -5,6 +5,7 @@ function checkInitialClickColor(x, y) {
   const activeClickColor = ["ff0000"];
 
   robot.moveMouseSmooth(x, y);
+  sleep(500);
   robot.mouseClick();
   robot.mouseClick();
 
@@ -23,6 +24,7 @@ function checkInitialClickColor(x, y) {
 
 function checkNextClickColor(x, y) {
   const activeClickColor = ["ff0000"];
+  sleep(500);
   robot.mouseClick();
   robot.mouseClick();
 
@@ -49,6 +51,7 @@ const checkFishingSpotV2 = () => {
     if (secondSpot === true) {
       sleep(10000);
       robot.moveMouseSmooth(950, 690);
+      sleep(500);
       let mouse = robot.getMousePos();
       sleep(1000);
       if (checkNextClickColor(mouse.x, mouse.y)) {
@@ -63,6 +66,7 @@ const checkFishingSpotV2 = () => {
         }
         sleep(2000);
         robot.moveMouseSmooth(1070, 685);
+        sleep(500);
         robot.mouseClick();
         sleep(2000);
         console.log("Leaving spot 2.");
@@ -77,6 +81,7 @@ const checkFishingSpotV2 = () => {
     if (secondSpot === false) {
       sleep(2000);
       robot.moveMouseSmooth(1070, 685);
+      sleep(500);
       robot.mouseClick();
       sleep(2000);
 
@@ -100,11 +105,13 @@ const checkFishingSpotV2 = () => {
           }
           sleep(2000);
           robot.moveMouseSmooth(1312, 607);
+          sleep(500);
           robot.mouseClick();
           sleep(2000);
           console.log("Leaving spot 3.");
         } else {
           robot.moveMouseSmooth(1312, 607);
+          sleep(500);
           robot.mouseClick();
           sleep(2000);
           console.log("Leaving spot 3 right away.");
@@ -114,6 +121,7 @@ const checkFishingSpotV2 = () => {
       if (thirdSpot === false) {
         sleep(2000);
         robot.moveMouseSmooth(1312, 607);
+        sleep(500);
         robot.mouseClick();
         sleep(2000);
         console.log("Leaving spot 3.");
