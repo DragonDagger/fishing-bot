@@ -41,7 +41,8 @@ function checkNextClickColor(x, y) {
   }
 }
 
-// redo the function for draynor village spots
+// redo the function for draynor village spots, face east using the compass  ( see screenshot image for starting point. )
+// only start using this fishing spot if combat level is 15+, this is because the dark wizards will attack you if you have a lower combat level.
 const checkFishingSpotV2 = () => {
   const firstSpot = checkInitialClickColor(986, 685);
 

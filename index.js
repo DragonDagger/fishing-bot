@@ -18,11 +18,11 @@ const automation = () => {
   let counter = 0;
   // infinite loop
   while (true) {
-    // stop holding down shift key
+    // stop holding down shift key when not emptying inventory
     // robot.keyToggle("shift", "up");
     robot.setMouseDelay(2);
 
-    // the amount of function calls needed here will change depending on fishing level (this is because: chance of successul catch increases the higher your level is.)
+    // the amount of function calls needed here will change depending on fishing level (this is because: chance of successful catch increases the higher your level is.)
     checkFishingSpotV2();
     checkFishingSpotV2();
     checkFishingSpotV2();

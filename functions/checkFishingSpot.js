@@ -38,6 +38,8 @@ function checkNextClickColor(x, y) {
     return false;
   }
 }
+
+// South of Lumbridge fishing spots, face north using the compass  ( see screenshot image for starting point. ) This function works in tandem with the emptyInventory function.
 const checkFishingSpot = () => {
   const firstSpot = checkInitialClickColor(975, 678);
 
