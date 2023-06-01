@@ -1,6 +1,7 @@
 var robot = require("robotjs");
 const { emptyInventory } = require("./functions/emptyInventory");
 const { checkFishingSpot } = require("./functions/checkFishingSpot");
+const { checkFishingSpotV2 } = require("./functions/checkFishingSpotV2");
 const { sleep } = require("./functions/sleep");
 
 const automation = () => {
@@ -21,9 +22,9 @@ const automation = () => {
     robot.setMouseDelay(2);
 
     // the amount of function calls needed here will change depending on fishing level (this is because: chance of successul catch increases the higher your level is.)
-    checkFishingSpot();
-    checkFishingSpot();
-    checkFishingSpot();
+    checkFishingSpotV2();
+    checkFishingSpotV2();
+    checkFishingSpotV2();
     // checkFishingSpot();
 
     // start holding down shift key, empty the inventory
