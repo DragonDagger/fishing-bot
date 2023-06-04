@@ -16,7 +16,6 @@ const draynorFishingSpot = () => {
   let counter = 0;
   // infinite loop
   while (true) {
-    // stop holding down shift key when not emptying inventory
     robot.setMouseDelay(2);
 
     // the amount of function calls needed here will change depending on fishing level (this is because: chance of successful catch increases the higher your level is.)

@@ -1,47 +1,11 @@
 const robot = require("robotjs");
 const { sleep } = require("./sleep");
+const {
+  checkInitialClickColor,
+  checkNextClickColor,
+} = require("./checkClickColors");
 
-function checkInitialClickColor(x, y) {
-  const activeClickColor = ["ff0000"];
-
-  robot.moveMouseSmooth(x, y);
-  sleep(500);
-  robot.mouseClick();
-  robot.mouseClick();
-
-  // taking a screenshot
-  var img = robot.screen.capture(0, 0, 1920, 1080);
-  var samePixel = img.colorAt(x, y);
-
-  if (activeClickColor.includes(samePixel)) {
-    console.log("Active fishing spot found on samePixel check.");
-    return true;
-  } else {
-    console.log("no active fishing spot here.");
-    return false;
-  }
-}
-
-function checkNextClickColor(x, y) {
-  const activeClickColor = ["ff0000"];
-  sleep(500);
-  robot.mouseClick();
-  robot.mouseClick();
-
-  // taking a screenshot
-  var img = robot.screen.capture(0, 0, 1920, 1080);
-  var samePixel = img.colorAt(x, y);
-
-  if (activeClickColor.includes(samePixel)) {
-    console.log("Still an active fishing spot...");
-    return true;
-  } else {
-    console.log("This fishing spot is no longer active.");
-    return false;
-  }
-}
-
-// redo the function for draynor village spots, face east using the compass  ( see screenshot image for starting point. )
+// draynor village fishing spots, face east using the compass  ( see screenshot image for starting point. )
 // only start using this fishing spot if combat level is 15+, this is because the dark wizards will attack you if you have a lower combat level.
 const checkFishingSpotV2 = () => {
   const firstSpot = checkInitialClickColor(986, 685);

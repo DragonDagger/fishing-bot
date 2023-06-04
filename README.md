@@ -9,6 +9,8 @@ This repository uses [Robot.js](https://robotjs.io/) to automate mouse and keybo
 
 - This bot has been tested on the standard OSRS client ( **Not RuneLite.** ) on a 1920 x 1080 Resolution Display, Windows 10.
 - If using Mac, you may have to update system preferences to allow the script to run.
+- **Disclaimer:** No Runescape economies were harmed in the making of this bot 😉
+- **Inspired by:** Learncodebygaming's [woodcutting bot](https://github.com/learncodebygaming/woodcutter).
 
 ## Prereqs:
 
@@ -62,8 +64,3 @@ This repository uses [Robot.js](https://robotjs.io/) to automate mouse and keybo
 
 1. More random variations between inputs/movements so its harder to pickup that it's a bot.
 2. Future Fishing Spot locations, using bait for better xp rates.
-
----
-
-- **Disclaimer:** No Runescape economies were harmed in the making of this bot 😉
-- **Inspired by:** Learncodebygaming's [woodcutting bot](https://github.com/learncodebygaming/woodcutter).

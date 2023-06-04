@@ -1,43 +1,9 @@
 const robot = require("robotjs");
 const { sleep } = require("./sleep");
-
-function checkInitialClickColor(x, y) {
-  const activeClickColor = ["ff0000"];
-
-  robot.moveMouseSmooth(x, y);
-  robot.mouseClick();
-  robot.mouseClick();
-
-  // taking a screenshot
-  var img = robot.screen.capture(0, 0, 1920, 1080);
-  var samePixel = img.colorAt(x, y);
-
-  if (activeClickColor.includes(samePixel)) {
-    console.log("Active fishing spot found on samePixel check.");
-    return true;
-  } else {
-    console.log("no active fishing spot here.");
-    return false;
-  }
-}
-
-function checkNextClickColor(x, y) {
-  const activeClickColor = ["ff0000"];
-  robot.mouseClick();
-  robot.mouseClick();
-
-  // taking a screenshot
-  var img = robot.screen.capture(0, 0, 1920, 1080);
-  var samePixel = img.colorAt(x, y);
-
-  if (activeClickColor.includes(samePixel)) {
-    console.log("Still an active fishing spot...");
-    return true;
-  } else {
-    console.log("This fishing spot is no longer active.");
-    return false;
-  }
-}
+const {
+  checkInitialClickColor,
+  checkNextClickColor,
+} = require("./checkClickColors");
 
 // South of Lumbridge fishing spots, face north using the compass  ( see screenshot image for starting point. ) This function works in tandem with the emptyInventory function.
 const checkFishingSpot = () => {
@@ -137,8 +103,4 @@ const checkFishingSpot = () => {
   }
 };
 
-module.exports = {
-  checkInitialClickColor,
-  checkFishingSpot,
-  checkNextClickColor,
-};
+module.exports = { checkFishingSpot };

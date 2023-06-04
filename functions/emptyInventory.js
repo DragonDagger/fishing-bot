@@ -13,6 +13,7 @@ const dropShrimp = (minimumX, maximumX, minimumY, maximumY, speed) => {
   sleep(numberBetween(140, 310));
 };
 
+// drops items based on coordinates inside the inventory. If using a different resolution display then this would not work unti lthe x, y values are adjusted.
 const emptyInventory = () => {
   dropShrimp(1861, 1869, 981, 987, 0.5);
   dropShrimp(1810, 1819, 981, 987, 8);

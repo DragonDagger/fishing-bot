@@ -1,6 +1,7 @@
 const robot = require("robotjs");
 const { sleep } = require("./sleep");
 
+// this function works in tandem with the draynorFishingSpot, draynor bank.
 const moveToBank = () => {
   sleep(3000);
   robot.moveMouse(1776, 87);
