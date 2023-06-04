@@ -26,7 +26,7 @@ const moveToBank = () => {
   robot.moveMouseSmooth(850, 945, 0.5);
   sleep(1000);
   robot.mouseClick();
-  sleep(5000);
+  sleep(8000);
 };
 
 module.exports = { moveToBank };
