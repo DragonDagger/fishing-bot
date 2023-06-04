@@ -54,7 +54,7 @@ This repository uses [Robot.js](https://robotjs.io/) to automate mouse and keybo
 4. If color was not red, move to the **second** spot and repeat the process.
 5. If color was still not detected, move to the **third** spot and repeat the process.
 6. Catch all, Move's back to first spot, ready for the next loop iteration.
-7. When time is up and function has been called 3-4 times, assumes inventory is full and then empty it one by one.
+7. When time is up and function has been called 3-4 times, assumes inventory is full and then either drop fish or goto the bank.
 8. Loop currently repeats infinitely.
 9. XP per hour: 4000 - 9000XP per hour, Depending on fishing level.
 
