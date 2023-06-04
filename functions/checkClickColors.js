@@ -1,3 +1,5 @@
+const robot = require("robotjs");
+
 function checkInitialClickColor(x, y) {
   const activeClickColor = ["ff0000"];
 
