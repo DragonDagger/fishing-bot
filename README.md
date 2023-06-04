@@ -12,19 +12,39 @@ This repository uses [Robot.js](https://robotjs.io/) to automate mouse and keybo
 
 ## Prereqs:
 
-- start by standing at the fishing spot, south of lumbridge.
-- face the camera north by clicking the compass icon.
-- Make sure camera zoom is set to exactly halfway (this can be set and locked, in settings)
+- start by standing at one of the spots provided in the images.
+- face the camera in the direction needed by clicking the compass icon.
+- Make sure camera zoom is set to exactly how it is in the image. (this can be set and locked, in settings)
 - Set display to `Resizable - Classic layout` ( The Windows task bar takes up space in the display, so account for this. )
 - In your settings, allow click+shift to drop items
 
+---
+
 <details>
 
-  <summary>Bot Flow Video</summary>
+  <summary>Lumbridge Fishing Spot</summary>
 
-https://github.com/DragonDagger/robotjs-shrimp/assets/101432646/f6bbcfc1-028a-4f10-a019-cd39a245930b
+<img src="./images/lumby-spott.png" alt="alt text" width="900"/>
 
 </details>
+
+<details>
+
+  <summary>Draynor Village Fishing Spot</summary>
+
+<img src="./images/draynor-spot.png" alt="alt text" width="900"/>
+
+</details>
+
+<details>
+
+  <summary>Al Kharid Cooking Spot</summary>
+
+<img src="./images/cookFood.png" alt="alt text" width="900"/>
+
+</details>
+
+---
 
 ### Current flow of the bot
 
@@ -40,10 +60,8 @@ https://github.com/DragonDagger/robotjs-shrimp/assets/101432646/f6bbcfc1-028a-4f
 
 ### Future Goals for the bot
 
-1. Ability to empty inventory more efficiently.
-2. More random variations between inputs/movements so its harder to pickup that it's a bot.
-3. An alternate script that walks shrimp to the bank and returns to fishing spot.
-4. An alternate script that cooks shrimp before dropping them.
+1. More random variations between inputs/movements so its harder to pickup that it's a bot.
+2. Future Fishing Spot locations, using bait for better xp rates.
 
 ---
 

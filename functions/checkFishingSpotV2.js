@@ -5,6 +5,7 @@ function checkInitialClickColor(x, y) {
   const activeClickColor = ["ff0000"];
 
   robot.moveMouseSmooth(x, y);
+  sleep(500);
   robot.mouseClick();
   robot.mouseClick();
 
@@ -23,6 +24,7 @@ function checkInitialClickColor(x, y) {
 
 function checkNextClickColor(x, y) {
   const activeClickColor = ["ff0000"];
+  sleep(500);
   robot.mouseClick();
   robot.mouseClick();
 
@@ -39,16 +41,18 @@ function checkNextClickColor(x, y) {
   }
 }
 
-// South of Lumbridge fishing spots, face north using the compass  ( see screenshot image for starting point. ) This function works in tandem with the emptyInventory function.
-const checkFishingSpot = () => {
-  const firstSpot = checkInitialClickColor(975, 678);
+// redo the function for draynor village spots, face east using the compass  ( see screenshot image for starting point. )
+// only start using this fishing spot if combat level is 15+, this is because the dark wizards will attack you if you have a lower combat level.
+const checkFishingSpotV2 = () => {
+  const firstSpot = checkInitialClickColor(986, 685);
 
   if (firstSpot === false) {
-    const secondSpot = checkInitialClickColor(850, 685);
+    const secondSpot = checkInitialClickColor(860, 700);
 
     if (secondSpot === true) {
       sleep(10000);
-      robot.moveMouseSmooth(950, 670);
+      robot.moveMouseSmooth(950, 690);
+      sleep(500);
       let mouse = robot.getMousePos();
       sleep(1000);
       if (checkNextClickColor(mouse.x, mouse.y)) {
@@ -62,12 +66,13 @@ const checkFishingSpot = () => {
           }
         }
         sleep(2000);
-        robot.moveMouseSmooth(1050, 580);
+        robot.moveMouseSmooth(1070, 685);
+        sleep(500);
         robot.mouseClick();
         sleep(2000);
         console.log("Leaving spot 2.");
       } else {
-        robot.moveMouseSmooth(1050, 580);
+        robot.moveMouseSmooth(1070, 685);
         robot.mouseClick();
         sleep(2000);
         console.log("Leaving spot 2 right away.");
@@ -76,16 +81,17 @@ const checkFishingSpot = () => {
 
     if (secondSpot === false) {
       sleep(2000);
-      robot.moveMouseSmooth(1050, 590);
+      robot.moveMouseSmooth(1070, 685);
+      sleep(500);
       robot.mouseClick();
       sleep(2000);
 
-      const thirdSpot = checkInitialClickColor(1200, 515);
+      const thirdSpot = checkInitialClickColor(570, 795);
       sleep(2000);
 
       if (thirdSpot === true) {
         sleep(10000);
-        robot.moveMouseSmooth(1070, 593);
+        robot.moveMouseSmooth(950, 693);
         sleep(1000);
         let mouse = robot.getMousePos();
         if (checkNextClickColor(mouse.x, mouse.y)) {
@@ -99,12 +105,14 @@ const checkFishingSpot = () => {
             }
           }
           sleep(2000);
-          robot.moveMouseSmooth(850, 755);
+          robot.moveMouseSmooth(1312, 607);
+          sleep(500);
           robot.mouseClick();
           sleep(2000);
           console.log("Leaving spot 3.");
         } else {
-          robot.moveMouseSmooth(850, 755);
+          robot.moveMouseSmooth(1312, 607);
+          sleep(500);
           robot.mouseClick();
           sleep(2000);
           console.log("Leaving spot 3 right away.");
@@ -112,7 +120,9 @@ const checkFishingSpot = () => {
       }
 
       if (thirdSpot === false) {
-        robot.moveMouseSmooth(850, 755);
+        sleep(2000);
+        robot.moveMouseSmooth(1312, 607);
+        sleep(500);
         robot.mouseClick();
         sleep(2000);
         console.log("Leaving spot 3.");
@@ -138,7 +148,5 @@ const checkFishingSpot = () => {
 };
 
 module.exports = {
-  checkInitialClickColor,
-  checkFishingSpot,
-  checkNextClickColor,
+  checkFishingSpotV2,
 };
